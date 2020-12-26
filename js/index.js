@@ -5,12 +5,17 @@ const updateOutput = () => {
   let processedOutput = "";
   let word = "";
   for (i in rawInput) {
-    if (word === "" && rawInput[i] === " ") {
+    if (rawInput[i] === ";") {
+      if (isCppKeyword(word)) {
+        word = "<keyword>" + word + "</keyword>";
+      }
+      processedOutput = processedOutput + " " + word + ";<br/>";
+      word = "";
+    } else if (word === "" && rawInput[i] === " ") {
       continue;
     } else {
       if (word && rawInput[i] === " ") {
         if (isCppKeyword(word)) {
-          console.log(word);
           word = "<keyword>" + word + "</keyword>";
         }
         processedOutput = processedOutput + " " + word;

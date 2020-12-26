@@ -7,6 +7,7 @@ body {
 .wrapper {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 #input {
   background-color: #000000;
