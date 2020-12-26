@@ -9,6 +9,7 @@ body {
   justify-content: space-evenly;
 }
 #input {
+  background-color: #000000;
   color: #00ff00;
 }
 #output {
