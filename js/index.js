@@ -1,68 +1,34 @@
 const input = document.getElementById("input");
 const output = document.getElementById("output");
 const updateOutput = () => {
-  output.innerHTML = input.value;
-};
-const isCppKeyword = (word) => {
-  switch (word) {
-    case "": {
-      break;
-    }
-    case "": {
-      break;
-    }
-    case "": {
-      break;
-    }
-    case "": {
-      break;
-    }
-    case "": {
-      break;
-    }
-    case "": {
-      break;
-    }
-    case "": {
-      break;
-    }
-    case "": {
-      break;
-    }
-    case "": {
-      break;
-    }
-    case "": {
-      break;
-    }
-    case "": {
-      break;
-    }
-    case "": {
-      break;
-    }
-    case "": {
-      break;
-    }
-    case "": {
-      break;
-    }
-    case "": {
-      break;
-    }
-    case "": {
-      break;
-    }
-    case "": {
-      break;
-    }
-    case "": {
-      break;
-    }
-    case "": {
-      break;
+  const rawInput = input.value + " ";
+  let processedOutput = "";
+  let word = "";
+  for (i in rawInput) {
+    if (word === "" && rawInput[i] === " ") {
+      continue;
+    } else {
+      if (word && rawInput[i] === " ") {
+        if (isCppKeyword(word)) {
+          console.log(word);
+          word = "<b>" + word + "</b>";
+        }
+        processedOutput = processedOutput + " " + word;
+        word = "";
+      } else {
+        word = word + rawInput[i];
+      }
     }
   }
+  output.innerHTML = processedOutput;
+};
+const isCppKeyword = (word) => {
+  for (key in cppkeywords) {
+    if (cppkeywords[key] === word) {
+      return true;
+    }
+  }
+  return false;
 };
 const cppkeywords = [
   "asm",
