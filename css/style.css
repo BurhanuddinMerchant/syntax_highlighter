@@ -1,0 +1,23 @@
+:root {
+  --green: #00ff00;
+}
+body {
+  font-size: 16px;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+#input {
+  color: #00ff00;
+}
+#output {
+}
+.container {
+  width: 45%;
+  min-width: 400px;
+  height: 400px;
+  border: brown 5px solid;
+  padding: 1em;
+  font-size: 1em;
+}

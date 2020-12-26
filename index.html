@@ -7,8 +7,15 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <textarea id="input" oninput="updateOutput()"></textarea>
-    <div id="output"></div>
+    <div class="wrapper">
+      <textarea
+        id="input"
+        class="container"
+        oninput="updateOutput()"
+        placeholder="input your code here"
+      ></textarea>
+      <div id="output" class="container"></div>
+    </div>
     <script src="./js/index.js"></script>
   </body>
 </html>
