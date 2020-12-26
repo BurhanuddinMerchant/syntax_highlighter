@@ -11,7 +11,7 @@ const updateOutput = () => {
       if (word && rawInput[i] === " ") {
         if (isCppKeyword(word)) {
           console.log(word);
-          word = "<b>" + word + "</b>";
+          word = "<keyword>" + word + "</keyword>";
         }
         processedOutput = processedOutput + " " + word;
         word = "";

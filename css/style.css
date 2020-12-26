@@ -22,3 +22,7 @@ body {
   padding: 1em;
   font-size: 1em;
 }
+keyword {
+  color: coral;
+  font-weight: 700;
+}
